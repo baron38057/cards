@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fern1am</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+</head>
+<body>
+<div class="bg-animated"></div>
+
+<div class="container" id="card">
+  <div class="title">Fern1am</div>
+  <hr>
+  <div class="subtitle">18yo<br>Just vibing on the web</div>
+
+  <div><small>Telegram: <a href="https://t.me/hihnob" style="color: #ff9999;" target="_blank">@hihnob</a></small></div>
+
+  <div class="links-container">
+    <a class="button" id="links-discord" href="https://discord.com/users/fern1am" target="_blank">
+      <img src="avatar.jpg" alt="avatar" class="discord-avatar">
+      <div>
+        <h2 align="left" class="font-semibold break-all" style="color: rgb(255, 255, 255);">ID: fern1am</h2>
+        <h3>◬C11H15NO◬ • Владелец/perchika/fernando</h3>
+      </div>
+    </a>
+
+    <div class="container2">
+      <a href="https://steamcommunity.com/profiles/76561199131010715" class="box" target="_blank">
+        <img src="steam_icon.png" alt="Image">
+        <span>STEAM</span>
+      </a>
+      <a href="https://namemc.com/profile/Fern1am.1" class="box" target="_blank">
+        <img src="namemc.jpg" alt="Image">
+        <span>namemc</span>
+      </a>
+    </div>
+    
+  </div>
+
+
+  <div class="banner-box">
+    <img src="banner.jpg" alt="banner">
+  </div>
+
+  <div class="music-player">
+    <div class="song-info">
+      <div class="song-title">2 PHUT HON FUNK</div>
+    </div>
+
+    <div class="player-controls">
+      <button class="player-btn">⏮</button>
+      <button class="player-btn play-btn" id="playBtn">▶</button>
+      <button class="player-btn">⏭</button>
+    </div>
+
+    <div class="progress-container" id="progressContainer">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <div class="time-info">
+      <span id="currentTime">0:00</span>
+      <span id="duration">0:00</span>
+    </div>
+
+    <div class="player-bottom">
+      <div class="volume-control">
+        <button class="volume-btn" id="volumeBtn">🔈</button>
+        <input type="range" min="0" max="1" step="0.01" value="0.3" class="volume-slider" id="volumeSlider">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
