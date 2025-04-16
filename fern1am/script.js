@@ -1,18 +1,18 @@
- const card = document.getElementById("card");
- document.addEventListener("mousemove", (e) => {
-   const x = (window.innerWidth / 2 - e.clientX) / 30;
-   const y = (window.innerHeight / 2 - e.clientY) / 30;
-   card.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
- });
- document.addEventListener("mouseleave", () => {
-   card.style.transform = `rotateY(0deg) rotateX(0deg)`;
-  });
+const card = document.getElementById("card");       //card is moving 4 mouse
+document.addEventListener("mousemove", (e) => {
+  const x = (window.innerWidth / 2 - e.clientX) / 30;
+  const y = (window.innerHeight / 2 - e.clientY) / 30;
+  card.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+});
+document.addEventListener("mouseleave", () => {
+  card.style.transform = `rotateY(0deg) rotateX(0deg)`;
+});
 
-const volumeSlider = document.getElementById('volumeSlider');
+const volumeSlider = document.getElementById('volumeSlider');     //music player code
 const volumeBtn = document.getElementById('volumeBtn');
 
 const sound = new Howl({
-  src: ['music.mp3'],
+  src: ['music/music.mp3'],
   html5: true,
   volume: 0.1,
   onplay: () => {
@@ -103,3 +103,19 @@ function updateVolumeIcon(volume) {
     volumeBtn.textContent = '🔊';
   }
 }
+
+window.addEventListener('DOMContentLoaded', () => { // function 4 starting cringe music after hiding text "tap anywhere to continue"
+  overlay.addEventListener('click', () => {
+    const playBtn = document.getElementById('playBtn');
+    if (playBtn) playBtn.click();
+    overlay.style.transition = 'opacity 0.5s ease';
+    overlay.style.opacity = '1';
+    requestAnimationFrame(() => {
+      overlay.style.opacity = '0';
+    });
+    setTimeout(() => {
+      overlay.style.display = 'none';
+      card.style.display = 'block';
+    }, 500); 
+  });
+});
