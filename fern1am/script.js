@@ -1,12 +1,23 @@
-const card = document.getElementById("card");       //card is moving 4 mouse
+const card = document.getElementById("card");
+
 document.addEventListener("mousemove", (e) => {
-  const x = (window.innerWidth / 2 - e.clientX) / 30;
-  const y = (window.innerHeight / 2 - e.clientY) / 30;
-  card.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+  rotateElement(e, card);
 });
-document.addEventListener("mouseleave", () => {
-  card.style.transform = `rotateY(0deg) rotateX(0deg)`;
-});
+
+function rotateElement(event, element) {
+  const x = event.clientX;
+  const y = event.clientY;
+
+  const middleX = window.innerWidth / 2;
+  const middleY = window.innerHeight / 2;
+
+  const offsetX = ((x - middleX) / middleX) * 25; // increase or decrease speed of rotation here
+  const offsetY = ((y - middleY) / middleY) * 25;
+
+  element.style.setProperty("--rotateX", offsetX + "deg");
+  element.style.setProperty("--rotateY", -1 * offsetY + "deg");
+}
+
 
 const volumeSlider = document.getElementById('volumeSlider');     //music player code
 const volumeBtn = document.getElementById('volumeBtn');

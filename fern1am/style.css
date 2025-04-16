@@ -1,7 +1,8 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: radial-gradient(ellipse at center, #330000 0%, #000000 100%);
+  /* background: radial-gradient(ellipse at center, #330000 0%, #000000 100%); */
+  background: radial-gradient(ellipse at center, #07c9ff 0%, #000000 100%);
   color: white;
   overflow-x: hidden;
 }
@@ -25,10 +26,12 @@ body {
   background-color: rgba(15, 15, 30, 0.3);
   backdrop-filter: blur(18px);
   border-radius: 20px;
-  box-shadow: 0 0 25px rgba(255, 0, 0, 0.2);
+  /* box-shadow: 0 0 25px rgba(255, 0, 0, 0.2); */
+  box-shadow: 0 0 45px rgba(0, 255, 13, 0.2);
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   will-change: transform;
+  
 }
 
 .title {
@@ -45,9 +48,9 @@ body {
   display: block;
   margin: 12px auto;
   padding: 10px 20px;
-  background: #3a1f1f;
-  border: none;
-  border-radius: 12px;
+  background: #489cbd;
+  border: 3px solid #ffffff;
+  border-radius: 8px;
   color: white;
   text-decoration: none;
   font-weight: 600;
@@ -56,7 +59,7 @@ body {
 }
 
 .button:hover {
-  background: #512828;
+  background: #36748d;
 }
 
 .music-player {
@@ -100,7 +103,7 @@ body {
 }
 
 .player-btn:hover {
-  color: #ff5555;
+  color: #1ac4f8;
 }
 
 .play-btn {
@@ -119,7 +122,7 @@ body {
 
 .progress-bar {
   height: 100%;
-  background: #ff5555;
+  background: #1ac4f8;
   border-radius: 4px;
   width: 0%;
   transition: width 0.1s;
@@ -171,7 +174,7 @@ body {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: #ff5555;
+  background: #1ac4f8;
   cursor: pointer;
 }
 
@@ -180,7 +183,7 @@ body {
   padding: 0;
   border-radius: 12px;
   overflow: hidden;
-  border: 3px solid #712020;
+  border: 3px solid #e1e1e1;
 }
 
 .banner-box img {
@@ -195,7 +198,6 @@ body {
   font-size: 12px;
 }
 
-/* часть которую писал никитка ахах */
 
 #links-discord {
   width: 560px;
@@ -211,14 +213,14 @@ body {
   width: 65px;
   height: 65px;
   border-radius: 15%;
-  border: 3px solid #712020;
+  border: 3px solid #e1e1e1;
 }
 
 hr {
   margin: 20px 0;  
   border: none;
   height: 4px;
-  background: linear-gradient(to right, rgb(92, 4, 4), rgb(160, 4, 4));
+  background: linear-gradient(to right, rgb(255, 255, 255), rgb(91, 91, 91));
 }
 
 #links-discord h2 {
@@ -242,11 +244,12 @@ hr {
   a.box {
     display: flex;
     align-items: center;
-    background-color: #3a1f1f;
+    background-color: #489cbd; 
     padding: 20px;
     width: 295px;
     height: 40px;
     box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    border: 3px solid #ffffff;
     border-radius: 8px;
     text-decoration: none;
     color: rgb(255, 255, 255);
@@ -254,7 +257,7 @@ hr {
   }
 
   a.box:hover {
-    background: #512828;
+    background: #36748d;
   }
 
   .box img {
@@ -263,7 +266,7 @@ hr {
     object-fit: cover;
     margin-right: 15px;
     border-radius: 15%;
-    border: 3.5px solid #712020;
+    border: 3.5px solid #e1e1e1;
   }
 
   .box span {
@@ -280,7 +283,8 @@ hr {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(ellipse at center, #330000 0%, #000000 100%);
+    /* background: radial-gradient(ellipse at center, #330000 0%, #000000 100%); */
+    background: radial-gradient(ellipse at center, #0d77c7 0%, #000000 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -302,3 +306,16 @@ hr {
     50% { opacity: 0.4; }
   }
   
+  #card {
+    transform-style: preserve-3d;
+    transform: perspective(5000px) rotateY(var(--rotateX)) rotateX(var(--rotateY));
+  }
+  
+  .invalid_photo {
+    width: 20px;
+    height: 20px;
+  }
+
+  .text {
+    color: #ffffff;
+  }
